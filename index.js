@@ -10,7 +10,7 @@ import cors from 'cors'
 
 
 mongoose
-    .connect('mongodb+srv://admin:wwwwww@cluster0.s8z0md6.mongodb.net/blog?appName=Cluster0')
+    .connect(process.env.MONGODB_URI)
     .then(() => console.log('DB OK'))
     .catch((err) => console.log("Eror: ", err))
 
